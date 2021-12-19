@@ -18,7 +18,7 @@ export type Post = {
 };
 
 // relative to the server output not the source!
-const postsPath = path.join(__dirname, "../", "posts");
+const postsPath = path.join(__dirname, "posts");
 
 export async function getPosts() {
   console.log(postsPath, "@@@@@");
