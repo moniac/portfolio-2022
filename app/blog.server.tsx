@@ -43,7 +43,7 @@ export async function getPost(slug: string) {
   const postContent = file.toString();
 
   const result = await bundleMDX({
-    source: postContent,
+    file: filepath,
     xdmOptions(options) {
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
@@ -56,7 +56,7 @@ export async function getPost(slug: string) {
       return options;
     },
   });
-
+  console.log(result, "___@@@");
   return {
     slug,
     html: result.code,

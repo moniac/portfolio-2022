@@ -474,7 +474,7 @@ async function getPost(slug) {
   const file = await import_promises.default.readFile(filepath);
   const postContent = file.toString();
   const result = await (0, import_mdx_bundler.bundleMDX)({
-    source: postContent,
+    file: filepath,
     xdmOptions(options) {
       options.rehypePlugins = [
         ...options.rehypePlugins ?? [],
@@ -486,6 +486,7 @@ async function getPost(slug) {
       return options;
     }
   });
+  console.log(result, "___@@@");
   return {
     slug,
     html: result.code,
