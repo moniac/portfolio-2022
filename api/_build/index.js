@@ -78,7 +78,7 @@ var import_remix2 = __toModule(require("remix"));
 var import_react_feather = __toModule(require("react-feather"));
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-D5HQBARV.css";
+var global_default = "/build/_assets/global-AY5YXHR7.css";
 
 // app/styles/dark.css
 var dark_default = "/build/_assets/dark-RLW6FJQO.css";
