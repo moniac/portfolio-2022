@@ -156,7 +156,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       <div className="container">
-        {!response.spotifyError && <NowPlaying {...response} />}
+        {!response?.spotifyError && <NowPlaying {...response} />}
       </div>
       <footer className="remix-app__footer">
         <div className="container remix-app__footer-content">
