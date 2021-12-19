@@ -456,9 +456,8 @@ var rehype_meta_attribute_default = (options = {}) => {
 // app/blog.server.tsx
 var import_rehype_toc = __toModule(require("@jsdevtools/rehype-toc"));
 var import_rehype_slug = __toModule(require("rehype-slug"));
-var postsPath = import_path.default.join(__dirname, "../..", "posts");
+var postsPath = import_path.default.join(__dirname, "..", "posts");
 async function getPosts() {
-  console.log(postsPath, "@@@@@");
   const dir = await import_promises.default.readdir(postsPath);
   return Promise.all(dir.map(async (filename) => {
     const file = await import_promises.default.readFile(import_path.default.join(postsPath, filename));
